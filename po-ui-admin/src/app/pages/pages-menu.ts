@@ -22,6 +22,7 @@ export const MENU_ITEMS: PoMenuItem[] = [
         icon: "po-icon-edit",
         subItems: [
             { label: 'Buttons', link: "forms/buttons" },
+            { label: 'Datepicker', link: "forms/datepicker" },
         ]
     },
     {

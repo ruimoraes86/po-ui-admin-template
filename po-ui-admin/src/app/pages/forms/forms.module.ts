@@ -6,15 +6,19 @@ import { FormsRoutingModule } from './forms-routing.module';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { FormsComponent } from './forms.component';
 import { PoUiModule } from 'src/app/core/po-ui.module';
+import { DatepickerComponent } from './datepicker/datepicker.component';
+import { FormsModule } from '@angular/forms';
 
 const components = [
   FormsComponent,
-  ButtonsComponent
+  ButtonsComponent,
+  DatepickerComponent
 ]
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     FormsRoutingModule,
     PoUiModule
   ],
@@ -22,4 +26,4 @@ const components = [
     ...components
   ]
 })
-export class FormsModule { }
+export class FormsPageModule { }

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { FormsComponent } from './forms.component';
 import { ButtonsComponent } from './buttons/buttons.component';
+import { DatepickerComponent } from './datepicker/datepicker.component';
 
 const routes: Routes = [{
     path: '',
@@ -10,6 +11,10 @@ const routes: Routes = [{
     children: [{
         path: 'buttons',
         component: ButtonsComponent,
+    },
+    {
+        path: 'datepicker',
+        component: DatepickerComponent,
     }],
 }];
 

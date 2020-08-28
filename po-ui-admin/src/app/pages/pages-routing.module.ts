@@ -22,7 +22,7 @@ const routes: Routes = [{
         {
             path: 'forms',
             loadChildren: () => import('./forms/forms.module')
-                .then(m => m.FormsModule),
+                .then(m => m.FormsPageModule),
         },
         {
             path: 'ui-features',

@@ -1,0 +1,15 @@
+<po-page-default p-title="Datepicker">
+    <div class="po-row">
+        <po-widget class="po-md-6" p-title="Common Datepicker">
+            <po-datepicker p-locale="pt-br" p-placeholder="Form Picker"></po-datepicker>
+        </po-widget>
+        <po-widget class="po-md-6" p-title="Datepicker With Range">
+            <po-datepicker class="po-md-3" [(ngModel)]="start" p-locale="pt-br" p-label="Start Date"></po-datepicker>
+            <po-datepicker class="po-md-3" [(ngModel)]="end" p-locale="pt-br" p-label="End Date"></po-datepicker>
+            <po-datepicker-range class="po-md-6" p-locale="pt-br" p-label="Range" [p-start-date]="start" [p-end-date]="end"></po-datepicker-range>
+        </po-widget>    
+        <po-widget class="po-md-12" p-title="Datepicker With Disabled Min Max Values">
+            <po-datepicker p-locale="pt-br" p-min-date="2020-08-21" p-max-date="2020-08-25"></po-datepicker>
+        </po-widget>
+    </div>
+</po-page-default>
