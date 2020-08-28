@@ -18,6 +18,13 @@ export const MENU_ITEMS: PoMenuItem[] = [
         ]
     },
     {
+        label: 'Forms', 
+        icon: "po-icon-edit",
+        subItems: [
+            { label: 'Buttons', link: "forms/buttons" },
+        ]
+    },
+    {
         label: 'UI Features',
         icon: "po-icon-qr-code",
         subItems: [
