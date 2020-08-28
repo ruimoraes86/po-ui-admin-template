@@ -1,0 +1,129 @@
+<po-page-default p-title="Tabs">
+    <po-widget class="po-md-6" p-title="Simple Tab">
+        <po-tabs>
+            <po-tab p-label="Simple Tab 1" p-active>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit, interdum diam mus enim torquent dui massa
+                iaculis, eleifend habitant vestibulum taciti ultricies ut. Justo morbi semper hendrerit conubia nullam
+                class a, cursus vitae sollicitudin ornare risus magna posuere torquent, id sem nec elit et neque. Varius
+                sem odio libero fermentum lacinia fringilla consectetur, pellentesque dapibus elit arcu pharetra
+                nascetur sit erat, posuere tincidunt id parturient nisl curabitur. Viverra finibus amet lacinia euismod
+                pharetra enim diam, vehicula hac risus ligula montes dictum, in porttitor lectus duis conubia imperdiet.
+                Semper ornare lacus tellus quisque penatibus neque suscipit parturient, efficitur vulputate phasellus
+                fames nostra elit scelerisque conubia, lorem imperdiet ut primis pretium ridiculus auctor.
+            </po-tab>
+
+            <po-tab p-label="Simple Tab 2">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit quis nunc pellentesque, bibendum eleifend
+                suspendisse vestibulum etiam neque mattis laoreet porta dictumst, torquent accumsan condimentum mus
+                viverra scelerisque vulputate natoque morbi. Pellentesque vivamus primis vehicula nam eget mattis
+                lorem vivamus phasellus dis, elit sollicitudin curabitur vehicula morbi viverra sem volutpat velit.
+                Penatibus adipiscing ipsum feugiat ut ex mus proin at, nostra accumsan nisl velit risus dis tristique
+                viverra vulputate, venenatis nec laoreet fermentum semper aliquet tincidunt. Vel tempor lectus sem purus
+                laoreet urna tincidunt suscipit, accumsan praesent congue dictum nascetur fermentum mauris enim, non
+                porta eget gravida fames cras ligula. Euismod vivamus consequat conubia morbi accumsan diam, donec nam
+                curabitur mattis nullam mus natoque, faucibus sociosqu inceptos netus parturient. Ullamcorper finibus
+                integer metus fusce tellus justo, dis nibh quam maximus accumsan aliquet, mauris vehicula morbi amet
+                hac.
+            </po-tab>
+
+            <po-tab p-label="Simple Tab 3">
+                Lorem ipsum dolor sit amet consectetur adipiscing, elit lectus penatibus nam in metus senectus, nostra
+                taciti felis at facilisis. Augue hac tempus penatibus ligula mi rutrum venenatis eu, aenean porttitor
+                mollis vivamus eget phasellus nisi iaculis, aliquet torquent mattis ac non litora sagittis. Ultrices
+                semper blandit tellus at nisl vitae non quam, diam ipsum platea augue lacinia facilisi ante magna felis,
+                potenti netus accumsan lectus euismod primis duis. Potenti nascetur ante curabitur mattis ultricies quam
+                mauris, nisi feugiat facilisi nullam velit malesuada ad, consectetur commodo odio aliquet turpis congue.
+                Convallis leo ridiculus rutrum morbi nisi platea natoque mi sit, dui euismod eget magnis habitasse
+                vestibulum sem ac quam, a in nisl lacus elit massa volutpat tempor. Platea risus tincidunt ultricies
+                eleifend lacinia lorem sem et inceptos, vel vestibulum euismod libero arcu proin feugiat dapibus
+                porttitor urna, penatibus laoreet varius parturient blandit sociosqu accumsan amet. Eget neque eleifend
+                massa tristique consectetur nibh, efficitur nostra velit augue venenatis felis, aptent vivamus senectus
+                faucibus volutpat.
+            </po-tab>
+
+        </po-tabs>
+    </po-widget>
+
+    <po-widget class="po-md-6" p-title="Tab Options">
+        <div class="po-row">
+            <po-switch class="po-md-3" name="smallTabs" p-label="Small Tabs" p-label-position="Left"
+                (p-change)="changeValue($event)"></po-switch>
+            <po-switch class="po-md-3" name="disableTab" p-label="Disable Tab (3)" p-label-position="Left"
+                (p-change)="disableTab($event)"></po-switch>
+        </div>
+
+        <po-tabs [p-small]="isSmall">
+            <po-tab p-label="Tab 1" p-active>
+                <img src="https://picsum.photos/200" />
+            </po-tab>
+            <po-tab p-label="Tab 2">
+                <img src="https://picsum.photos/300" />
+            </po-tab>
+            <po-tab p-label="Tab 3" [p-disabled]="isTabDisabled">
+                <img src="https://picsum.photos/400" />
+            </po-tab>
+        </po-tabs>
+    </po-widget>
+
+    <po-widget class="po-md-12" p-title="Full width Tab">
+        <po-tabs>
+            <po-tab p-label="Full widht Tab 1">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit aliquet, cursus fames congue lacinia cras
+                pellentesque eu, dignissim litora laoreet scelerisque ridiculus a vel. Lobortis hac justo consequat
+                iaculis blandit nam varius, primis nullam cursus tempor quis magnis sapien condimentum, mauris elementum
+                lectus ridiculus mattis vivamus. Est dapibus a sed tortor elementum facilisis donec eros ipsum diam
+                vehicula, curabitur lacus penatibus eleifend senectus facilisi luctus suspendisse eget class,
+                condimentum tempor gravida adipiscing laoreet dignissim potenti quam aenean ultricies. Dictum consequat
+                vivamus primis in blandit ante tortor nisl placerat est, hendrerit mi fusce eget montes lobortis
+                volutpat rhoncus. Ut rhoncus bibendum eros dolor sem tempor, orci quis phasellus aliquet amet elit
+                congue, aenean conubia adipiscing pretium sed.
+
+                Varius efficitur nisl in pharetra sociosqu habitant, magnis tempus neque tortor viverra semper gravida,
+                ex suscipit amet quam donec feugiat, dignissim ullamcorper est a cras. Venenatis pellentesque sem erat
+                fermentum nullam class mauris euismod habitasse ut nisi, gravida ipsum maecenas sapien dis posuere massa
+                molestie per inceptos, leo facilisis vitae integer arcu porttitor montes nunc ultricies lacinia. Tempus
+                enim himenaeos aenean netus feugiat sodales integer, elementum interdum vel elit efficitur ullamcorper
+                faucibus nulla, ligula senectus lacinia lorem arcu quam. Lacinia faucibus diam ultricies dui massa class
+                mi suspendisse porttitor dis, dictum feugiat amet semper mollis mus tellus justo lectus phasellus, arcu
+                pharetra duis vulputate et turpis consequat pellentesque pretium. Dictumst ornare fusce duis litora
+                primis nullam accumsan aliquam ipsum, dapibus interdum velit bibendum facilisis ultricies rutrum
+                rhoncus. Vehicula sapien curae in cubilia est eros, nulla primis cras quam nisi iaculis bibendum,
+                suspendisse magnis lobortis neque arcu. Porttitor dictumst sem imperdiet proin sit sodales orci,
+                maecenas ridiculus nec ultricies nascetur senectus eu et, integer efficitur quis faucibus vitae in.
+                Inceptos efficitur sem tortor dapibus consectetur eu, bibendum dis suscipit lectus justo rhoncus,
+                vulputate lacinia dictum ornare ridiculus. Rhoncus aptent ut cursus eros inceptos, leo mauris potenti
+                lectus condimentum at, massa sociosqu sem netus. Ut aliquet gravida vulputate venenatis eget adipiscing
+                efficitur sem morbi finibus, enim nisi fringilla maximus curae mollis natoque interdum dui faucibus
+                torquent, maecenas primis varius id nibh sit quis rutrum curabitur.
+            </po-tab>
+
+            <po-tab p-label="Full widht Tab 2" p-active>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit euismod magnis orci, hendrerit libero dui
+                dictumst et phasellus proin facilisis hac, dis semper molestie rutrum sodales quam senectus rhoncus per.
+                Taciti egestas euismod nunc posuere quis gravida placerat lectus porta nisi nostra faucibus, venenatis
+                rutrum magnis vestibulum maecenas pretium consectetur ad netus nullam. Posuere inceptos suspendisse
+                praesent donec ex nullam, sagittis class netus aptent ligula sapien felis, fermentum vel velit facilisi
+                elementum. Per habitant imperdiet vel suspendisse potenti efficitur pharetra conubia, eros netus sem
+                condimentum a inceptos augue, ultrices facilisis class dignissim cursus quam tellus. Efficitur fringilla
+                urna cursus ex risus lobortis nunc iaculis suscipit vel volutpat rhoncus fermentum, ipsum id auctor
+                pharetra odio vestibulum ornare porttitor tellus curae tincidunt bibendum. Conubia metus viverra aenean
+                vulputate efficitur egestas luctus tristique consequat, urna sed a commodo class euismod leo tellus,
+                tempus neque fames ipsum augue hac ultricies dis. Maecenas dictumst aptent dictum turpis integer est
+                pretium, vivamus aenean neque mauris ante fusce ut, phasellus facilisi quis elit suspendisse
+                sollicitudin. Faucibus torquent dictumst conubia hendrerit montes netus tortor senectus, accumsan
+                dapibus molestie natoque vulputate habitant consequat.
+
+                Diam cubilia justo volutpat nisl fames convallis platea cras, porta himenaeos lectus dis hac massa donec
+                hendrerit, integer malesuada ipsum adipiscing faucibus mi urna. Hac malesuada mus facilisi natoque
+                molestie augue mattis etiam, egestas aliquam habitant proin tempus curabitur ex rhoncus iaculis,
+                inceptos magnis dignissim nisl nibh tincidunt convallis varius, dictumst eget lorem elit sed sodales
+                feugiat. Nam conubia mattis mus natoque ex cursus pretium, mi ad litora molestie nullam tristique,
+                ornare ipsum quis massa odio tempor. Nam habitant tellus eget maecenas ipsum inceptos vehicula conubia
+                turpis scelerisque, felis faucibus potenti id blandit congue eu finibus condimentum, dui fringilla
+                efficitur elementum ornare molestie sed pharetra porta. Nibh phasellus hac venenatis hendrerit egestas
+                faucibus sagittis ullamcorper, suscipit parturient dictumst felis ultrices dolor pharetra, rhoncus
+                sociosqu aptent cubilia ridiculus mus maecenas.
+            </po-tab>
+        </po-tabs>
+    </po-widget>
+</po-page-default>

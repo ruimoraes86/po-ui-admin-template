@@ -1,0 +1,196 @@
+<po-page-default p-title="Stepper">
+    <po-widget p-title="Basic Stepper" class="po-md-12">
+        <po-stepper #stepper>
+            <po-step p-label="First Step">
+                <po-widget class="po-md-12" [p-primary-label]="nextLabelWidget" (p-primary-action)="stepper.next()">
+                    <h2>Step content #1</h2>
+                </po-widget>
+            </po-step>
+            <po-step p-label="Second Step">
+                <po-widget class="po-md-12" [p-primary-label]="previousLabelWidget"
+                    (p-primary-action)="stepper.previous()" [p-secondary-label]="nextLabelWidget"
+                    (p-secondary-action)="stepper.next()">
+                    <h2>Step content #2</h2>
+                </po-widget>
+            </po-step>
+            <po-step p-label="Third Step">
+                <po-widget class="po-md-12" [p-primary-label]="previousLabelWidget"
+                    (p-primary-action)="stepper.previous()" [p-secondary-label]="nextLabelWidget"
+                    (p-secondary-action)="stepper.next()">
+                    <h2>Step content #3</h2>
+                </po-widget>
+            </po-step>
+            <po-step p-label="Fourth Step">
+                <po-widget class="po-md-12" [p-primary-label]="previousLabelWidget"
+                    (p-primary-action)="stepper.previous()">
+                    <h2>Step content #4</h2>
+                </po-widget>
+            </po-step>
+        </po-stepper>
+    </po-widget>
+
+    <po-divider>
+
+    </po-divider>
+
+
+    <po-loading-overlay *ngIf="isLoading" p-text="Loading"> </po-loading-overlay>
+    <po-widget class="po-md-6" p-title="Stepper with Form">
+        <po-stepper #stepperForm p-step-icons>
+            <po-step p-label="Step 1" [p-can-active-next-step]="canActiveNextStep.bind(this, firstForm)">
+                <po-widget class="po-md-12" 
+                    [p-primary-label]="nextLabelWidget" 
+                    (p-primary-action)="stepperForm.next()">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit iaculis himenaeos dis molestie morbi, nisl
+                    nullam semper euismod condimentum mollis magnis urna quis at dignissim suscipit, sodales fames diam
+                    non quam vehicula vivamus nunc eu nisi per. Nisl habitasse litora molestie nec at hendrerit odio
+                    himenaeos enim, risus aenean eget semper netus rhoncus lobortis metus, purus ultricies leo per arcu
+                    potenti non ad
+
+                    <form #firstForm="ngForm">
+                        <div class="po-row">
+                            <po-input class="po-md-12" name="input1" [(ngModel)]="input1" p-clean
+                                p-placeholder="Enter something" p-required> </po-input>
+                        </div>
+                    </form>
+                </po-widget>
+            </po-step>
+
+            <po-step p-label="Step 2" [p-can-active-next-step]="canActiveNextStep.bind(this, secondForm)">
+                <po-widget class="po-md-12" 
+                    [p-primary-label]="previousLabelWidget"
+                    (p-primary-action)="stepperForm.previous()"
+                    [p-secondary-label]="nextLabelWidget"
+                    (p-secondary-action)="stepperForm.next()">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit luctus, tortor orci fames platea netus
+                    ullamcorper vulputate ornare, etiam accumsan lacus interdum ac nam mi.
+                    <form #secondForm="ngForm">
+                        <div class="po-row">
+                            <po-input class="po-md-12" name="input2" [(ngModel)]="input2" p-clean
+                                p-placeholder="Enter something" p-required> </po-input>
+                        </div>
+                    </form>
+                </po-widget>
+            </po-step>
+
+            <po-step p-label="Step 3" [p-can-active-next-step]="canActiveNextStep.bind(this, thirdForm)">
+                <po-widget class="po-md-12" 
+                    [p-primary-label]="previousLabelWidget"
+                    [p-secondary-label]="nextLabelWidget" 
+                    (p-primary-action)="stepperForm.previous()"
+                    (p-secondary-action)="stepperForm.next()">
+                    Lorem ipsum dolor sit amet consectetur adipiscing, elit posuere erat nec tincidunt ante, etiam massa
+                    ridiculus curabitur id. Curae porttitor nascetur metus vulputate montes lobortis rutrum habitasse
+                    ante, accumsan aptent nibh ornare facilisis erat suspendisse urna arcu duis, aenean lacus sem fusce
+                    sit elementum a ultrices
+                    <form #thirdForm="ngForm">
+                        <div class="po-row">
+                            <po-input class="po-md-12" name="input3" [(ngModel)]="input3" p-clean
+                                p-placeholder="Enter something" p-required> </po-input>
+                        </div>
+                    </form>
+                </po-widget>
+            </po-step>
+
+            <po-step p-label="Finish">
+                <po-widget class="po-md-12" 
+                    [p-primary-label]="previousLabelWidget"
+                    [p-secondary-label]="confirmLabelWidget" 
+                    (p-primary-action)="stepperForm.previous()"
+                    (p-secondary-action)="onConfirmStep(stepperForm)">
+                    LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISCING ELIT, VITAE PRETIUM SUSCIPIT APTENT SAPIEN DUIS
+                    VEL SOLLICITUDIN, ORNARE ALIQUET ID VENENATIS DICTUM IN.                    
+                </po-widget>
+            </po-step>
+
+
+        </po-stepper>
+    </po-widget>
+
+    <po-widget class="po-md-6" p-title="Stepper Vertical">
+        <po-stepper #stepperHorizontal p-orientation="vertical">
+            <po-step p-label="First Step">
+                <po-widget class="po-md-12" [p-primary-label]="nextLabelWidget"
+                    (p-primary-action)="stepperHorizontal.next()">
+                    <h2>Step content #1</h2>
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit mollis dis sociosqu ligula, cursus tempor
+                    accumsan auctor velit varius mattis nascetur leo. Enim tempor malesuada inceptos curabitur eget
+                    pharetra condimentum ornare, felis ac aliquam tristique curae penatibus maecenas quisque, iaculis
+                    nullam congue posuere in eu gravida. Justo sed leo semper elementum dapibus aptent, fermentum
+                    imperdiet pulvinar curabitur donec magnis pharetra, nam vehicula ligula facilisi blandit. Efficitur
+                    adipiscing nullam pellentesque hendrerit mi erat varius vivamus, quam ex accumsan elit torquent
+                    faucibus inceptos commodo, non hac aptent orci laoreet blandit praesent. Vestibulum eleifend nulla
+                    penatibus taciti ad vivamus ipsum tristique dapibus pulvinar, cubilia non donec neque dignissim ut
+                    augue commodo maecenas integer, pretium enim per pellentesque nam felis tincidunt elit magnis.
+                    Curabitur turpis rhoncus semper varius iaculis consequat parturient elit risus, auctor libero
+                    facilisis dui orci suspendisse lorem dictum, primis proin praesent class habitant tempus non erat.
+                    Sollicitudin adipiscing malesuada scelerisque facilisis molestie pellentesque egestas, ullamcorper
+                    condimentum aenean bibendum dis suscipit pretium, finibus magnis magna inceptos rutrum semper,
+                    placerat morbi fusce accumsan neque hac. Sit morbi ultrices dictum hendrerit turpis integer etiam ut
+                    pretium nisi, dapibus molestie nulla ultricies ac finibus interdum mus condimentum maecenas et,
+                    risus augue euismod consequat orci primis praesent gravida proin.
+                </po-widget>
+            </po-step>
+            <po-step p-label="Second Step">
+                <po-widget class="po-md-12" [p-primary-label]="previousLabelWidget"
+                    (p-primary-action)="stepperHorizontal.previous()" [p-secondary-label]="nextLabelWidget"
+                    (p-secondary-action)="stepperHorizontal.next()">
+                    <h2>Step content #2</h2>
+                    Lorem ipsum dolor sit amet consectetur adipiscing, elit nulla nibh porttitor iaculis ante congue,
+                    sociosqu fermentum semper cras blandit. Nascetur orci pretium conubia at mollis, turpis eu porttitor
+                    ut tempus, nibh ridiculus sed dapibus. Molestie faucibus taciti pulvinar integer sodales est,
+                    iaculis bibendum varius nunc posuere, ultricies eget at sagittis vitae. Ante primis ipsum aliquet
+                    massa non molestie mattis sit congue, ornare dui vulputate lobortis interdum laoreet orci
+                    pellentesque leo, ultrices eleifend tempor himenaeos donec varius aptent consectetur. Et fusce
+                    semper potenti mus auctor ullamcorper tincidunt praesent nisl ultrices, conubia integer egestas
+                    congue turpis arcu gravida nisi massa lacinia netus, montes pellentesque luctus vestibulum cursus
+                    eget sociosqu ante a. Congue libero eros in sapien augue rhoncus dui non cras mollis, integer
+                    porttitor nullam mi inceptos sollicitudin etiam conubia elementum. Sociosqu penatibus fames
+                    curabitur neque nec viverra posuere turpis aliquam gravida tempor, curae eu fusce inceptos vivamus
+                    tempus dis habitasse justo leo, orci rutrum fermentum sagittis lectus cursus convallis amet
+                    tincidunt ornare.
+                </po-widget>
+            </po-step>
+            <po-step p-label="Third Step">
+                <po-widget class="po-md-12" [p-primary-label]="previousLabelWidget"
+                    (p-primary-action)="stepperHorizontal.previous()" [p-secondary-label]="nextLabelWidget"
+                    (p-secondary-action)="stepperHorizontal.next()">
+                    <h2>Step content #3</h2>
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit primis urna gravida ligula, nec tempor vitae
+                    sed sollicitudin non phasellus sociosqu donec. Tincidunt leo pellentesque rhoncus dui libero arcu
+                    cras, auctor suspendisse phasellus cubilia enim eu eleifend, aliquet venenatis fermentum dolor ex
+                    erat. Lacus mattis fusce commodo vulputate suspendisse conubia dui vestibulum velit diam, blandit
+                    accumsan litora porttitor ullamcorper maecenas iaculis cubilia primis aptent ad, nascetur gravida
+                    molestie sollicitudin finibus fames hac montes sem. Porttitor interdum leo molestie volutpat
+                    pulvinar efficitur ut primis sollicitudin lorem, purus lectus blandit facilisi nulla tincidunt
+                    egestas venenatis mus ac, elementum vel consectetur metus habitasse fames donec semper adipiscing.
+                    Venenatis congue egestas ac sollicitudin elementum massa erat lacinia odio fusce, accumsan tellus
+                    rhoncus efficitur ipsum sed iaculis nec nascetur habitasse aliquet, commodo justo arcu viverra
+                    litora varius nam penatibus leo.
+                </po-widget>
+            </po-step>
+            <po-step p-label="Fourth Step">
+                <po-widget class="po-md-12" [p-primary-label]="previousLabelWidget"
+                    (p-primary-action)="stepperHorizontal.previous()">
+                    <h2>Step content #4</h2>
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit, ornare leo per lobortis sociosqu ante
+                    libero, mattis nullam aenean bibendum ut nisl. Praesent fermentum habitasse egestas taciti conubia
+                    curabitur vivamus lorem vulputate nec varius nam, lacus ante cursus quisque maximus eros nulla
+                    maecenas scelerisque imperdiet ullamcorper. Mattis inceptos ullamcorper hendrerit vestibulum magna
+                    morbi felis mi ligula proin gravida risus libero himenaeos, nec nam litora senectus ridiculus
+                    sodales sapien ex sociosqu eros iaculis justo. Dis tincidunt litora nibh turpis morbi purus risus
+                    vestibulum, sapien at ante nisl natoque posuere. Praesent eu tincidunt euismod quis congue
+                    parturient commodo cursus ut vehicula, posuere netus faucibus aliquet facilisis vel sociosqu morbi
+                    sodales, eget tortor duis scelerisque magnis natoque tellus ad tempor.
+                </po-widget>
+            </po-step>
+        </po-stepper>
+    </po-widget>
+</po-page-default>
+
+<po-modal #successData p-title="Informations">
+    <div class="po-row">
+        <img class="po-offset-md-6 po-offset-xl-3" src="../../../../assets/images/check.png" width="350" height="350" />
+        <p class="po-offset-md-8 po-offset-xl-3 po-font-title">Success!</p>
+    </div>
+</po-modal>

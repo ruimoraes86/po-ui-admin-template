@@ -1,0 +1,14 @@
+<po-toolbar p-actions="Array<PoToolbarAction>" 
+    [p-actions]="actions" 
+    p-actions-icon="po-icon-social-github"   
+    [p-notification-actions]="notifications"
+    [p-notification-number]="number" 
+    [p-profile]="user" 
+    [p-profile-actions]="profileActions"
+    p-show-notification="boolean"
+    p-title="po-admin-ui">
+</po-toolbar>
+
+<po-modal #settings p-title="Settings">
+    <app-settings></app-settings>
+</po-modal>
